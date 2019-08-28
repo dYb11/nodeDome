@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    function aa(){
+        //获得匹配元素的当前值
+        var test=$("#ee").val();
+        console.log(test);
+        var text="";
+        //使用get方法发送元素中的值，并使用回调函数接收并处理
+        $.get("aa.json",null,function(result){
+            console.log(result.a);
+            /* $.each(qq,function(row){
+             text+="<li>"+row+"</li>";
+             });*/
+            //html将text添加到id为ss的节点中
+            $("#ss").html(text);
+        })
+    }
+</script>
+<body>
+
+<input type="text" oninput="aa()" id="ee"><input type="button" value="搜索">
+<ul style="margin: 0px 0px;list-style:none; width: 171px;border: 1px solid;padding: 0px" id="ss">
+
+</ul>
+</body>
+</html>

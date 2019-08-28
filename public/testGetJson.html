@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <script language="JavaScript">
+        //    var obj=new User();   在计算机内存中会分配这个对象的空间。
+         function test(){
+             $.getJSON("http://localhost:3001/action/Testgetjson?jsoncallback=?", function(data){
+                   $("span").text(data.key);
+             })
+         }
+    </script>
+</head>
+<body>
+     <input type="button"  onclick="test();" value="测试"/>
+      <span></span>
+</body>
+</html>
